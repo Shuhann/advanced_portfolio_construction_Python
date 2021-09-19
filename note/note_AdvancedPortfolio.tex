@@ -1,0 +1,553 @@
+\documentclass{maths}
+\begin{document}
+
+\section{Style \& Factors}
+\subsection{Introduction to factor investing}
+\begin{itemize}
+
+\item Traditional investment choices \textbf{active and passive}. 
+\begin{itemize}
+\item Passive is put your money in the index S\&P 500,and not try to outperform the index. 
+\item Active management is to try to outperform index.(that's why active managers are expensive and inconsistent). 
+\end{itemize}
+\item \textbf{Indexation} of a portion of active management. Indexation refers to the trend of creating new indices that capture the portion of active management that is rules based and systematic, and in the long run should outperform the cap-weighted benchmark. It is both active(not just cap weighted index) and passive(no subjective views).
+
+\item Factor: a variable which influences the returns of assets. It represents commonality in the returns something outside of the individual asset. 
+
+Factor premium: a risk premium associated with the factor. The excess return will be gained if one is willing to expose him/herself to the factor.
+
+\item Three types of factors.
+\begin{itemize}
+\item Macro factors: such as growth and inflation - not easy to trade
+\item Statistical/implicit factors: something extracted from the data that may or may not be identifiable. The commonality is intrinsic or implicit in the data. - not easy to trade
+\item Intrinsic/style factors(most common): such as value versus growth, momentum and low volatility.
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Factor models and CAPM}
+\begin{itemize}
+\item Factor model: decompose R into sum of premia\\
+\begin{align*}
+R_i &= \beta_1 f_1+\beta_2 f_2+\beta_3 f_3+...+\alpha+\epsilon
+\end{align*}
+
+\item CAPM: a factor model which only has only factor - market
+\begin{align*}
+E(r_i)-r_f &=\frac{cov(r_i,r_m)}{var(r_m)}(E(r_m)-r_f)\\
+E(r_i)-r_f &=\beta_i(E(r_m)-r_f)
+\end{align*}
+
+\item Various anomalies: have explanations that arise from a \textbf{rational risk-based story} or a \textbf{behavioral story} 
+\begin{itemize}
+\item \textbf{Rational}: High expected returns compensate for negative returns during certain periods. The key is defining what those bad times are\\
+\item \textbf{Behavioral}: High expected returns result from agents' under- or over-reaction to news and/or the inefficient updating of beliefs. Behavioral biases persist because there are barriers of the entry of capital
+\end{itemize}
+
+\item For some anomalies, the explanations are largely rational for others. Mostly behavioral.
+
+\begin{itemize}
+\item value/growth: rational and behavioral
+\item momentum, low-vol: behavioral, mostly
+\end{itemize}
+
+\item Value stocks usually outperform growth stocks. Low-vols outperform high-vols.Low beta stocks outperform high beta stocks.
+\begin{itemize}
+\item Value stocks: \\
+Def: Shares of a company that appears to trade at a lower price relative to its fundamentals, such as dividends, earnings, or sales, making it appealing to value investors.\\
+
+Characteristics: High dividend yield, low P/B ratio, and a low P/E ratio.\\
+
+Typically has a bargain-price as investors see the company as unfavorable in the marketplace.
+
+\item Growth stocks:\\
+Share in a company that is anticipated to grow at a rate significantly above the average growth for the market. \\These stocks generally do not pay dividends. This is because the issuers of growth stocks are usually companies that want to reinvest any earnings they accrue in order to accelerate growth in the short term. \\When investors invest in growth stocks, they anticipate that they will earn money through capital gains when they eventually sell their shares in the future.\\
+Growth stocks often look expensive, trading at a high P/E ratio, but such valuations could actually be cheap if the company continues to grow rapidly which will drive the share price up
+\end{itemize}
+
+\item Supplements
+\begin{enumerate}
+\item P/B ratio(price-to-book): \\compare a firm's market capitalization to its book value
+\begin{align*}
+\frac{\text{stock price per share}}{\text{book value per share (BVPS)}}
+\end{align*}
+
+\item P/E ratio(price-to-earnings):\\the ratio for valuing a company that measures its current share price relative to its per-share earnings (EPS).A high P/E ratio could mean that a company's stock is overvalued, or else that investors are expecting high growth rates in the future.
+\begin{align*}
+\frac{\text{current share price}}{\text{per-share earnings (EPS)}}
+\end{align*}
+\end{enumerate}
+\end{itemize}
+
+
+\subsection{Multi-Factor and Fama-French}
+\begin{itemize}
+\item \textbf{Size factor}: book/price(measure of `value').The size effect is a well-observed effect that seems to suggest that small cap stocks outperform large cap stocks.\\
+
+\item Fama-French model uses three factors:
+\begin{itemize}
+\item value versus growth(HML): High$\frac{\text{Book}}{\text{Price}}$(value) minus Low $\frac{\text{Book}}{\text{Price}}$(Growth)
+\item size factor(SMB): small versus big - Small minus big stocks\\
+Provides a portfolio which long in small stocks and short in big stocks. The difference becomes the return of the factor.
+\item market risk factor(MKT): beta
+\item 
+\begin{align*}
+E[r_i] &=r_f+\beta_{i,MKT}E[r_m-r_f]+\beta_{i,SMB}E[SMB]+\beta_{i,HML}E[HML]
+\end{align*}
+\end{itemize}
+
+\item Carhart model uses four factors:
+\begin{itemize}
+\item HML
+\item SMB
+\item MKT
+\item momentum factor: winner versus losers
+\end{itemize}
+\item Fama and French interpret the small stock effect and the value effect as being systematic factors.
+\item SMB and HML are zero-cost portfolios, so $\beta_{i,SMB}$ and $\beta_{i,HML}$ are centred around zero.(?)
+\item Factors today: Low-vol(low beats high), value, momentum and quality(high beats low). Size in practice is treated as a universe choice.
+
+\end{itemize}
+
+
+
+\subsection{Factor benchmarks and Style analysis}
+\begin{itemize}
+
+\item The simple CAPM is re-interpretable as a factor benchmark. Consider a portfolio with a beta of 1.3.
+\begin{align*}
+E(r_i)-r_f &=\alpha+1.3(E(r_m)-r_f)\\
+E[r_i]&=\alpha+[-0.3r_f+1.3E(r_m)]
+\end{align*}
+Factor benchmark is a short position of \$0.30 in cash(t-bills) and a leveraged position of \$1.30 in the market portfolio.
+
+$\alpha$ shows the value added by the manager.
+
+\item Style analysis is introduced by Sharpe(1992), and allows the benchmark to change over time. It decomposes the returns into some explanatory returns. By looking at the coefficients of these explanatory returns,one can tell the style of the manager.
+
+Factor/style loadings are re-estimated every period using data up until the current period.
+
+Sliding window allows for style drift of the manager.
+
+\item Model:
+\begin{align*}
+R_m = W_1&R_{i1}+W_2R_{i2}+W_3R_{i3}+...+\alpha+\epsilon \\
+\text{S.T. }& W_i > \text{0 and sum}(W_i) = 1
+\end{align*}
+Solved through quadratic programming repeated for a sliding window of 1-3 years over time.
+
+Quality of fit:
+\begin{align*}
+\text{PSEUDO }R^2 &=\frac{(\text{VAR(Rm)-VAR})(\epsilon))}{\text{VAR(Rm)}}\\
+\alpha &= \text{manager value added}
+\end{align*}
+\item Sharpe's paper(1992) - Fidelity Magellan fund
+
+
+\end{itemize}
+
+
+\subsection{Shortcomings of cap-weighted indices}
+\begin{itemize}
+\item Default approach to
+investment management is to use a cap-weighted index as a benchmark.
+
+It has two benefits: 
+
+1. It is simple and very easy to understand, their construction process is very simply.\\
+2. It is  consistent with the aggregate holding of the stocks within the context of the market portfolio by the aggregate investor.\\
+
+However, it is inefficient. According to Haugen and Baker(1991), CW portfolios occupy positions inside the efficient set.(also look at Schwartz(2000), and Platen and Rendek(2010))\\
+
+Why? It is due to lack of diversification. Cap-weighted indices tend to be heavily concentrated poorly diversified portfolios. 
+\item Other benchmark choices:
+\begin{itemize}
+\item Equally-weighted benchmarks
+\item Minimum variance benchmarks
+\item Risk-parity benchmarks
+\end{itemize}
+
+
+
+\end{itemize}
+
+
+\subsection{From cap-weighted benchmarks to smart-weighted benchmarks}
+\begin{itemize}
+\item Shortcomings of CW
+\begin{enumerate}
+
+\item CW indices provide an inefficient diversification of unrewarded and specific risks\\
+
+Solution: smarter weighting schemes\\
+
+\item CW indices provide an inefficient exposure to rewarded systematic risks. The portfolio will by construction have a bias towards large cap stocks as opposed to mid or small cap stocks, and a bias in favour of growth stocks as opposed to value stocks.\\
+
+Just the opposite to the work of Fama and French.\\
+
+Solution:\\
+Step 1: Select your desired factor exposure
+
+Step 2: Select your preferred weighting schemes 
+\end{enumerate}
+
+
+
+\end{itemize}
+
+
+\section{Robust estimates for the covariance matrix}
+\subsection{The Curse of Dimensionality}
+
+\begin{itemize}
+
+\item To obtain efficient frontier of $n$ securities, one must estimate
+\begin{itemize}
+\item $n$ expected returns
+\item $n$ volatility parameters
+\item $[n(n-1)/2]$ correlations \\
+\end{itemize}
+
+\item We expect to run into a serious as we need lots of data to estimate that many parameters with any degree of accuracy. Hence, we reduce the number of parameters to estimate.
+\begin{itemize}
+\item increase sample size - sample period/frequency
+\item decrease number of parameters - number of assets $n$ / number of parameters for a fixed $n$\\
+\end{itemize}
+
+\item Quiz 1:\\ What is the number of parameters required for mean-variance optimization based on the S\&P 500 universe, which contains 500 stocks?\\
+
+Answer: We need 500 expected return estimates and $\frac{500*499}{2}=124,750$ covariance parameter estimates, for a total of 125,250 parameter estimates.\\
+
+\item Extreme example 1:\\ No model risk - high sample risk
+
+The simplest estimate is given by the sample covariance estimate:
+\begin{align*}
+\hat{S}_{ij} = \frac{1}{T}\text{ }\Sigma_{t=1}^{T}&\left(R_{it}-\bar{R_i}\right)\left(R_jt-\bar{R_j}\right)\\
+\text{with： } \bar{R_i} &= \frac{1}{T} \text{ }\Sigma_{t=1}^{T}\left(R_{it}\right)\\
+\bar{R_j} &= \frac{1}{T} \text{ }\Sigma_{t=1}^{T}\left(R_{jt}\right)
+\end{align*}
+
+\item Extreme example 2:\\ High model risk - low sample risk
+
+Constant Correlation Model: assume identical $\rho$ for all $\rho_{ij}$
+\begin{align*}
+\hat{\sigma}_{ij}^{CC} = \hat{\sigma}_{i}\hat{\sigma}_{j}\hat{\rho}
+\end{align*}
+
+Cut the number $N\frac{n(n-1)}{2}$ of correlation parameters down to 1
+
+The optimal estimator of this constant correlation is the `global' average
+\begin{align*}
+\hat{\rho}=\frac{1}{n(n-1)}\text{ }\Sigma_{i,j=1,i \neq j}^{n}\hat{\rho}_{ij}
+\end{align*}
+
+
+\item Quiz 2:\\ What is the number of parameter estimates required for mean-variance optimization based on the S\&P 500 universe, when using the constant correlation covariance matrix estimate?\\
+
+Answer: We need 500 expected return estimates, 500 volatility parameter estimates, and also one correlation parameter estimate.\\
+
+\item 1973 by Elton and Gruber
+
+The \textbf{out-of-sample estimate} for the minimum variance portfolio constructed using the \textbf{constant correlation estimate} was better than the one using the sample estimate. So indeed the trade-off was worth it reducing sample risk, even though it came at the cost of huge amount of \textbf{model risk} that eventually kind of paid off.\\
+ 
+\item Wrap-up
+\begin{itemize}
+\item In the presence of large portfolios the number of parameters is often larger than the sample size.
+
+\item Increasing frequency is necessary but not always sufficient in terms of increasing sample size.
+
+\item Introducing structure helps dealing with sample risk. But this comes at the cost of model risk.
+
+
+\end{itemize}
+ 
+
+\end{itemize}
+
+\subsection{Estimating the Covariance Matrix with a Factor Model}
+
+\begin{itemize}
+
+\item Factor-based covariance estimate
+
+Assume stock returns are driven by a limited set of factors
+\begin{align*}
+&R_it = \mu_i + \beta_{i1}F_{1t}+...+\beta_{ik}F_{kt}+...+\beta_{iK}F_{Kt}+\epsilon_{it}\\
+\text{where }\beta_{ik} &\text{ is the sensitivity of asset i with respect to factor k(k = 1,...K)}
+\end{align*}
+
+\item An example with two factors
+\begin{itemize}
+\item Variance
+\begin{align*}
+\sigma_i^2 = \beta_{i1}^2\sigma_{F_1}^2+\beta_{i2}^2\sigma_{F_2}^2+2\beta_{i1}\beta_{i2}Cov(F_1,F_2)+\sigma_{\epsilon_i}^2
+\end{align*}
+
+\item Covariance
+\begin{align*}
+\sigma_{ij} = \beta_{i1}\beta_{j1}\sigma_{F_1}^2+\beta_{i2}\beta_{j2}\sigma_{F_2}^2+(\beta_{i1}\beta_{j2}+\beta_{i2}\beta_{j1})Cov(F_1,F_2)+Cov(\epsilon_{it},\epsilon_{jt})
+\end{align*}
+ 
+\end{itemize}
+
+Introduce structure by imposing that residuals are uncorrelated. If the factor model is well specified, assuming that
+the specific components are
+uncorrelated is not too bad an assumption
+\begin{align*}
+Cov(\epsilon_{it},\epsilon_{jt}) = 0
+\end{align*}
+ 
+ 
+\item Case with K uncorrelated factors
+\begin{itemize}
+\item General decomposition of returns
+\begin{align*}
+cov\left(R_i(t),R_j(t)\right) = \Sigma_{k=1}^K \beta_{ik}\beta_{jk}\sigma_{F_k}^2 + cov\left(\epsilon_i(t),\epsilon_j(t)\right)
+\end{align*}
+\item Assume uncorrelated residuals
+\begin{align*}
+\sigma_{ij} &= cov\left(R_i(t),R_j(t)\right) = \Sigma_{k=1}^K \beta_{ik}\beta_{jk}\sigma_{F_k}^2 \text{for } i \neq j\\
+\sigma_{ii} &= cov\left(R_i(t),R_i(t)\right) = \Sigma_{k=1}^K \beta_{ik}^2\sigma_{F_k}^2 + \sigma_{\epsilon_i}^2 \text{for } i = j\\
+\end{align*}
+\end{itemize} 
+
+
+\item Quiz 1\\
+How many parameters do you need to estimate when using a 2-factor models for estimating the covariance matrix of a universe of 500 stocks?
+
+Answer:\\
+We first need 500 volatility estimates for individual stock returns, plus 500 estimates of betas of stocks with respect to factor 1, 500 estimates of betas of stocks with respect to factor 2, and finally 2 volatility estimates for factor returns, which gives a total of 500+500+500+2=1,502, which compares favorably to $\frac{500*499}{2}=124,750$ when using the sample covariance matrix estimate.\\
+
+\item Choice of the factor model
+\begin{itemize}
+\item Sharpe's single-factor market model
+\item Multi-factor model
+\begin{itemize}
+\item Explicit factor model - Macro factors
+\item Explicit factor model - Micro factors
+\item Implicit factor model - Statistical factors\\
+\end{itemize}
+\end{itemize}
+
+\item Wrap-up
+\begin{itemize}
+\item Using a factor model is a convenient way to reduce the number of risk parameters, and to estimate while introducing a reasonable amount of model risk.
+
+\item An implicit factor model is often preferred since it lets the data tell us what the relevant factors are, thus alleviating model risk.
+\end{itemize}
+
+
+\end{itemize}
+
+
+\subsection{Honey I Shrunk the Covariance Matrix!}
+
+\begin{itemize}
+
+\item Trade-off between sample risk and model risk\\
+
+Sample risk:\\
+too many parameters to estimate\\
+
+model risk: \\
+constant correlation methodology or the factor base methodology \\
+
+a shrinkage approach to estimating the covariance matrix will mix sample risk and model risk
+
+\item Statistical shrinkage
+\begin{align*}
+\hat{S}_{shrink} = \hat{\delta}^*\hat{F}+\left(1-\hat{\delta}^*\right)\hat{S}
+\end{align*}
+
+\item Weight constraints versus statistical shrinkage
+\begin{itemize}
+
+\item Academic research shows that the mixture works better than either approach.
+
+\item (Jagannathan and Ma 2003):\\
+Imposing constraints on weights is equivalent to perform statistical shrinkage\\
+
+\end{itemize}
+
+\item Quiz:\\
+Consider two stocks with sample volatility estimates at 20\% and 30\%, respectively, and sample correlation at 0.75. Further assume that the average of the sample correlation estimates of all stocks in the universe is 0.5. What is for these two stocks the sample-based covariance estimate, the constant correlation covariance estimate and the covariance estimate based on statistical shrinkage with a shrinkage factor of 50\%?\\
+
+Answer:\\
+The sample-based estimate is $20\text{\%}*30\text{\%}*0.75=0.045$. 
+
+The constant correlation estimate is$20\text{\%}*30\text{\%}*0.5=0.03$. 
+
+The shrinkage estimate is $\frac{0.045+0.03}{2}=0.0375$. \\
+
+\item Wrap-up
+\begin{itemize}
+\item Statistical shrinkage allows one to find the optimal trade-off between sample risk and model risk
+
+\item It is based on an average of two covariance matrix estimates. One with high sample risk and one with high model risk.
+
+\item performing statistical shrinkage is formally equivalent to introducing min/max weight constraints 
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Portfolio Construction with Time-Varying Risk Parameters} 
+\begin{itemize}
+\item Curse of non-stationarity - risk parameters might be time-varying\\
+
+\item Estimating volatility\\
+
+Denote $\sigma_T$ as the volatility per day between day T and day T+1 as estimated at end of day T
+
+\begin{align*}
+\sigma_T^2 &= \frac{1}{T}\Sigma_{t=1}^T(R_t - \bar{R})^2\\
+\bar{R} &=\frac{1}{T}\Sigma_{t=1}^TR_t 
+\end{align*}
+
+Assume mean value of $R_t$ is zero
+
+\begin{align*}
+\sigma_T^2 &= \frac{1}{T}\Sigma_{t=1}^T(R_t)^2\\
+\end{align*}
+
+
+\item Quiz 1:\\
+Consider the following stream of returns: +1\%, -2\%, -1\%, +2\%. What are the corresponding (arithmetic) average return and volatility estimates? \\
+
+Answer:\\
+Average return is $\frac{1\%-2\%-1\%+2\%}{4}=0\%$. Variance of returns is $\frac{1\%^2-2\%^2-1\%^2+2\%^2}{4}=0.025\%$. Volatility is square-toot of variance: $\sqrt{0.025\%} =1.58\%$.\\
+
+\item Increasing \textbf{frequency} is better than increasing \textbf{sample period} in case of non-stationary return distributions.\\
+
+\item Trade-off between \textbf{expanding window analysis} and \textbf{rolling window analysis}\\
+
+Expanding window analysis:\\
+- A situation whereby as time goes by and you come up with new estimate for volatility, you're expanding the window as the name says, and you're increasing sample size.
+
+- Suitable for the case where asset returns are stationary and volatility is constant,
+because that's going to give a bigger sample. \\
+
+Rolling window analysis:\\
+- Keeps the constant,the size of the sample and at every point in time you're moving
+forward the window while keeping a given constant size. 
+
+- Suitable for the case where asset returns are not stationary and volatility moves around, so as to only look at the most recent data.\\ 
+
+
+\item Quiz 2:\\
+What type of data would give you the best estimation power for covariance matrix parameters, assuming constant parameters?
+
+Answer:\\
+ This gives you $52*5=260$ data points. Of course, if risk parameters are time-varying, it may not be such a good idea to use data extending over such a long time period.\\
+  
+\item Wrap-up\\
+
+We have reasons to believe that volatility changes over time.
+
+In this context using rolling windows is better than using expanding windows.
+
+In all cases, historical volatility estimates are backward looking in nature. They give an estimate for the average volatility over the sample period.
+
+\end{itemize}
+
+\subsection{Exponentially weighted average}
+\begin{itemize}
+\item Weighting scheme
+
+Instead of assigning equal weights to the observations we can set\\
+\begin{align*}
+\sigma_T^2 =\Sigma_{t=1}^T\alpha_tR_t^2&\\ &\text{where }\Sigma_{t=1}^T\alpha_t = 1
+\end{align*}
+
+\item EWMA model\\
+
+In an exponentially weighted moving average model, the weights decline exponentially as we move back through time, which leads to:\\
+\begin{align*}
+\alpha_t &= \frac{\lambda^{T-t}}{\Sigma_{t=1}^T\lambda^{T-t}}\\
+\end{align*}
+Covariance parameter estimate:\\
+\begin{align*}
+cov(R_i,R_j) = \Sigma_{t=1}^T\alpha_t\left(R_{i,t}-\bar{R_i}\right)\left(R_{j,t}-\bar{R_j}\right)\\
+\end{align*}
+The lowest the Lambda and the fastest the
+decrease of the importance of the oldest data point in the sample when estimating covariance parameters. \\
+
+Value for lambda
+around 0.9 has been found to be a reasonable value.\\
+
+Ok to use expanding windows.\\
+
+\item Quiz:\\
+If you’re using 10 years of daily returns and an exponentially weighted moving average estimator for the covariance matrix, should you be using a rolling window analysis or an expanding window analysis?\\
+ 
+Answer:\\
+Since we are using an exponentially weighted moving average estimator, the importance of past data gradually fades away as time goes by, and there is therefore no need to use rolling window analysis. 
+
+\item Rolling window analysis makes sense if you're concerned about time-varying risk parameters but the \textbf{problem with rolling window analysis} is as long as the data point is within the rolling window, it matters, and whenever it is out of the rolling window, it doesn't matter at all. So the day before it gets out, it's as important as the most recent observation, the next day it's out of the rolling window, it doesn't matter. 
+
+
+\end{itemize}
+
+\subsection{ARCH and GARCH Models}
+\begin{itemize}
+\item Arch model\\
+In an ARCH(T)model, we also assign some weight to the \textbf{long-run variance $V_L$}:
+
+\begin{align*}
+\sigma_T^2 = \gamma V_L+\Sigma_{t=1}^T\alpha_t R_T^2\\
+\text{where } \gamma + \Sigma_{t=1}^T \alpha_t = 1
+\end{align*}
+
+ARCH(1) model:\\
+\begin{align*}
+\sigma_T^2 = \gamma V_L+\alpha R_T^2\\
+\text{where } \gamma + \alpha = 1
+\end{align*}
+
+\item GARCH model\\
+In GARCH(1,1), we additionally assign some weight to the previous variance estimate to capture \textbf{volatility clustering}
+\begin{align*}
+\sigma_T^2 = \gamma V_L &+ \alpha R_T^2 + \beta \sigma_{T-1}^2\\
+\text{with }&\gamma +\alpha +\beta =1
+\end{align*}
+
+\item Quiz 1:\\
+Suppose the estimation of a GARCH(1,1) model on daily data gives:
+\begin{align*}
+\sigma_T^2 = 0.000002 +0.13R_T^2 +0.86\sigma_{T-1}^2
+\end{align*}
+and also suppose the last daily estimate of the volatility is 1.6\% per day and the most recent percentage change in the market variable is 1\%. What is the new daily volatility estimate?\\
+
+Answer:\\
+The new variance estimate is: $0.000002 + 0.13*0.0001+0.86*0.000256 = 0.00023516$. Taking the square root, we obtain the new volatility estimate as 1.53\% per day.\\
+
+\item Variations on GARCH\\
+GARCH(p,q):\\
+\begin{align*}
+\sigma_T^2 &= \omega+\Sigma_{i=1}^p \alpha_i R_{T-i}^2 + \Sigma_{j=1}^q \beta_j \sigma_{T-j}^2\\
+\omega&=\gamma V_L\\
+\end{align*}
+
+\item Factor GARCH\\
+GARCH models are very convenient in terms of time-varying parameters, but they increase the curse of dimensionality.\\
+
+Orthogonal (0)GARCH model:
+\begin{align*}
+\sigma_{ij}^{OGARCH} = \hat{\sigma}_{ij}(t)=\Sigma_{k=1}^K \hat{\beta}_{ik}\hat{\beta}_{jk} \hat{\sigma}_{F_k}^2(t)\\
+\end{align*}
+
+ 
+\item Quiz 2:\\
+How many parameters do you need to estimate when using a 2-factor models with GARCH(1,1) model for the volatility of each one of the two factors?\\
+
+Answer:\\
+We first need 500 volatility estimates for individual stock returns, plus 500 estimates of betas of stocks with respect to factor 1, 500 estimates of betas of stocks with respect to factor 2, and finally 3 GARCH parameter estimates for each factor, which gives a total of $500+500+500+2*3=1,506$, which is not much more than if we had assumed constant volatility parameters.\\
+
+\item Wrap-up\\
+GARCH models explicitly account for the time-varying nature of volatility, but they require additional parameter estimates.
+
+A parsimonious approach consists of mixing them with a factor model:\\
+Allowing the variance of the (uncorrelated) factors to follow a GARCH model
+    
+\end{itemize}
+
+\end{document}
